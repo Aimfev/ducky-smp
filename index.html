@@ -3,9 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ducky SMP</title>
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
+
 *{
     box-sizing:border-box;
 }
@@ -17,9 +23,15 @@ html{
 body{
     margin:0;
     font-family:Arial,Helvetica,sans-serif;
-    background:linear-gradient(135deg,#fff4b0 0%,#ffd166 45%,#ff7a00 100%);
+    background:
+        linear-gradient(
+            135deg,
+            #fff4b0 0%,
+            #ffd166 45%,
+            #ff7a00 100%
+        );
     background-attachment:fixed;
-    color:#3a2100;
+    color:#fff;
 }
 
 a{
@@ -27,15 +39,19 @@ a{
     color:inherit;
 }
 
-/* NAVIGATION */
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .nav{
     position:sticky;
     top:0;
-    z-index:100;
-    background:rgba(15,13,7,.92);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #66551a;
+    z-index:1000;
+    background:rgba(15,13,7,.65);
+    border-bottom:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
     padding:14px 6%;
 }
 
@@ -48,9 +64,10 @@ a{
 }
 
 .logo{
-    font-weight:900;
     font-size:22px;
-    color:#ffd52a;
+    font-weight:900;
+    color:#fff;
+    text-shadow:0 0 15px rgba(255,213,42,.5);
 }
 
 .links{
@@ -60,22 +77,26 @@ a{
 }
 
 .links a{
-    color:#fff3bf;
+    color:rgba(255,255,255,.85);
     transition:.2s;
 }
 
 .links a:hover{
-    color:#ffd52a;
+    color:#fff;
+    text-shadow:0 0 12px #fff;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:82vh;
     display:grid;
     place-items:center;
     text-align:center;
-    padding:70px 20px;
+    padding:80px 20px;
 }
 
 .hero-content{
@@ -85,74 +106,92 @@ a{
 
 .badge{
     display:inline-block;
-    border:1px solid #9d811c;
+    padding:9px 16px;
     border-radius:999px;
-    padding:8px 14px;
-    color:#5c3b00;
-    background:rgba(255,244,176,.7);
-    font-weight:700;
+    background:rgba(15,13,7,.35);
+    border:1px solid rgba(255,255,255,.35);
+    color:#fff;
+    font-weight:800;
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
 }
 
 .hero h1{
     font-size:clamp(55px,12vw,105px);
-    margin:18px 0 8px;
+    margin:20px 0 10px;
     line-height:.9;
-    color:#7a4300;
-    text-shadow:0 5px 0 #ffd166,0 0 35px #fff0a0;
+    color:#fff;
+    text-shadow:
+        0 5px 0 rgba(100,55,0,.5),
+        0 0 35px rgba(255,255,255,.55);
 }
 
 .hero p{
     font-size:19px;
-    color:#4b2b00;
+    color:#fff;
 }
 
 .hero-description{
     max-width:800px;
-    margin:18px auto;
+    margin:20px auto;
     line-height:1.7;
+    color:#fff;
 }
 
-/* BUTTONS */
+
+/* =========================
+   BUTTONS
+========================= */
 
 .buttons{
     display:flex;
-    gap:12px;
     justify-content:center;
+    align-items:center;
     flex-wrap:wrap;
-    margin-top:28px;
+    gap:14px;
+    margin-top:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:13px 21px;
-    border-radius:10px;
-    font-weight:800;
-    border:1px solid #a88920;
-    background:#ffd52a;
-    color:#1a1608;
-    box-shadow:0 7px 0 #705900;
+    padding:13px 22px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,213,42,.9);
+    color:#201500;
+    font-weight:900;
     cursor:pointer;
-    transition:.15s;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.2);
+    transition:.2s;
 }
 
 .btn:hover{
-    transform:translateY(-2px);
+    transform:translateY(-3px);
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.3);
 }
 
 .btn:active{
-    transform:translateY(3px);
-    box-shadow:0 3px 0 #705900;
+    transform:translateY(0);
 }
 
 .btn.alt{
-    background:#1a170b;
-    color:#ffe36a;
+    background:rgba(15,13,7,.55);
+    color:#fff;
     box-shadow:none;
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
 }
 
-/* SECTIONS */
+
+/* =========================
+   SECTIONS
+========================= */
 
 .section{
+    width:100%;
     max-width:1100px;
     margin:auto;
     padding:75px 20px;
@@ -164,81 +203,120 @@ a{
 }
 
 .title h2{
-    font-size:34px;
-    color:#5c3500;
     margin:0;
+    font-size:34px;
+    color:#fff;
+    text-shadow:0 2px 15px rgba(0,0,0,.3);
 }
 
 .title p{
-    color:#5c4820;
+    color:rgba(255,255,255,.85);
 }
 
-/* GRID */
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
-}
-
-/* CARDS */
+/* =========================
+   LIQUID GLASS CARD
+========================= */
 
 .card{
-    background:rgba(25,22,12,.94);
-    border:1px solid #5f501b;
-    border-radius:16px;
-    padding:24px;
-    box-shadow:0 12px 35px rgba(0,0,0,.2);
+    background:rgba(15,13,7,.48);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:22px;
+    padding:25px;
+    color:#fff;
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(255,255,255,.08);
 }
 
 .card h3{
-    color:#ffe36a;
     margin-top:0;
+    color:#fff;
 }
 
 .card p{
-    line-height:1.6;
-    color:#ddd19a;
+    color:#fff;
+    line-height:1.7;
 }
 
-/* WHY JOIN */
+
+/* =========================
+   FEATURE GRID
+========================= */
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(200px,1fr));
+    gap:18px;
+    margin-top:25px;
+}
 
 .feature-card{
-    background:rgba(25,22,12,.94);
-    border:1px solid #5f501b;
-    border-radius:16px;
     padding:22px;
-    color:#fff3bf;
+    border-radius:18px;
+
+    background:rgba(15,13,7,.38);
+    border:1px solid rgba(255,255,255,.16);
+
+    color:#fff;
     text-align:center;
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.18);
+
     transition:.2s;
 }
 
 .feature-card:hover{
-    transform:translateY(-4px);
-    border-color:#ffd52a;
-}
-
-.feature-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:18px;
-    margin-top:20px;
+    transform:translateY(-5px);
+    background:rgba(15,13,7,.55);
+    border-color:rgba(255,255,255,.3);
 }
 
 .why-text{
+    color:#fff;
     line-height:1.7;
-    color:#ddd19a;
 }
 
-/* SERVER INFO */
+
+/* =========================
+   SERVER GRID
+========================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+
+/* =========================
+   IP / PORT
+========================= */
 
 .ip{
     font-size:18px;
     color:#fff;
-    border:1px dashed #8d741e;
+
     padding:14px;
-    border-radius:10px;
-    background:#100e08;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
     word-break:break-all;
 }
 
@@ -248,61 +326,99 @@ a{
 }
 
 .server-value{
-    color:#ffe36a !important;
+    color:#fff !important;
     font-weight:800;
 }
 
-/* RULES */
+
+/* =========================
+   RULES
+========================= */
 
 .rule{
     padding:15px 0;
-    border-bottom:1px solid #403613;
-    color:#ddd19a;
-    line-height:1.6;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.15);
+
+    color:#fff;
+
+    line-height:1.7;
 }
 
 .rule:last-child{
     border-bottom:none;
 }
 
-/* STAFF */
+
+/* =========================
+   STAFF
+========================= */
 
 .staff{
-    font-weight:800;
-    color:#ffd52a !important;
+    color:#fff !important;
+    font-weight:900;
 }
 
 .small{
     font-size:13px !important;
-    color:#91865b !important;
+    color:rgba(255,255,255,.7) !important;
 }
 
-/* DISCORD */
+
+/* =========================
+   DISCORD
+========================= */
 
 .discord-card{
     text-align:center;
 }
 
 .discord-card h2{
-    color:#ffd52a;
+    margin-top:0;
+    color:#fff;
 }
 
-/* FOOTER */
+.discord-card p{
+    color:rgba(255,255,255,.85);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer{
+    margin-top:30px;
+    padding:40px 20px;
+
     text-align:center;
-    padding:35px 20px;
-    border-top:1px solid #433815;
-    color:#5c4315;
+
+    background:rgba(15,13,7,.35);
+
+    border-top:
+        1px solid rgba(255,255,255,.15);
+
+    color:#fff;
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 }
 
 .footer .small{
-    color:#6f5d32 !important;
+    color:rgba(255,255,255,.65) !important;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:650px){
+
+    .nav{
+        padding:14px 18px;
+    }
 
     .links{
         display:none;
@@ -310,11 +426,12 @@ a{
 
     .hero{
         min-height:75vh;
-        padding:60px 16px;
+        padding:65px 18px;
     }
 
     .hero h1{
-        font-size:clamp(48px,17vw,80px);
+        font-size:
+            clamp(48px,17vw,80px);
     }
 
     .hero p{
@@ -331,16 +448,37 @@ a{
 
     .card{
         padding:20px;
+        border-radius:18px;
+    }
+
+    .feature-card{
+        padding:19px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .buttons .btn{
+        width:100%;
+        max-width:300px;
+        text-align:center;
     }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav class="nav">
+
     <div class="navin">
 
         <a class="logo" href="#home">
@@ -348,18 +486,37 @@ a{
         </a>
 
         <div class="links">
-            <a href="#why">Why Join</a>
-            <a href="#server">Server</a>
-            <a href="#rules">Rules</a>
-            <a href="#staff">Staff</a>
-            <a href="#discord">Discord</a>
+
+            <a href="#why">
+                Why Join
+            </a>
+
+            <a href="#server">
+                Server
+            </a>
+
+            <a href="#rules">
+                Rules
+            </a>
+
+            <a href="#staff">
+                Staff
+            </a>
+
+            <a href="#discord">
+                Discord
+            </a>
+
         </div>
 
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header id="home" class="hero">
 
@@ -378,12 +535,20 @@ a{
         </p>
 
         <p class="hero-description">
-            ⚔️ <strong>PURE SEMI-ANARCHY. NO HAND-HOLDING.</strong>
+
+            ⚔️
+            <strong>
+                PURE SEMI-ANARCHY. NO HAND-HOLDING.
+            </strong>
+
             <br><br>
+
             Want an SMP where your choices actually matter?
             Ducky SMP is built for players who want freedom,
             chaos, PvP, and a survival experience shaped by the community.
+
         </p>
+
 
         <div class="buttons">
 
@@ -407,7 +572,9 @@ a{
 </header>
 
 
-<!-- WHY JOIN -->
+<!-- =========================
+     WHY JOIN
+========================= -->
 
 <section id="why" class="section">
 
@@ -423,13 +590,17 @@ a{
 
     </div>
 
+
     <div class="card">
 
         <p class="why-text">
+
             Want an SMP where your choices actually matter?
             Ducky SMP is built for players who want freedom,
             chaos, PvP, and a survival experience shaped by the community.
+
         </p>
+
 
         <div class="feature-grid">
 
@@ -463,7 +634,11 @@ a{
 
         </div>
 
-        <p class="why-text" style="margin-top:28px;">
+
+        <p
+            class="why-text"
+            style="margin-top:28px;"
+        >
 
             <strong>
                 No scripted storyline. No forced teams. No boring restrictions.
@@ -490,7 +665,9 @@ a{
 </section>
 
 
-<!-- SERVER INFO -->
+<!-- =========================
+     SERVER INFO
+========================= -->
 
 <section id="server" class="section">
 
@@ -506,7 +683,9 @@ a{
 
     </div>
 
+
     <div class="grid">
+
 
         <div class="card">
 
@@ -568,12 +747,15 @@ a{
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- RULES -->
+<!-- =========================
+     RULES
+========================= -->
 
 <section id="rules" class="section">
 
@@ -589,16 +771,30 @@ a{
 
     </div>
 
+
     <div class="card">
 
         <div class="rule">
-            <strong>1. No Exploiting</strong>
-            — Do not use hacks, cheats, or unfair exploits to gain an advantage.
+
+            <strong>
+                1. No Exploiting
+            </strong>
+
+            — Do not use hacks, cheats,
+            or unfair exploits to gain an advantage.
+
         </div>
 
+
         <div class="rule">
-            <strong>2. No Glitch Abuse</strong>
-            — Do not abuse bugs or glitches, including duplication glitches (dupes).
+
+            <strong>
+                2. No Glitch Abuse
+            </strong>
+
+            — Do not abuse bugs or glitches,
+            including duplication glitches (dupes).
+
         </div>
 
     </div>
@@ -606,7 +802,9 @@ a{
 </section>
 
 
-<!-- STAFF -->
+<!-- =========================
+     STAFF
+========================= -->
 
 <section id="staff" class="section">
 
@@ -622,7 +820,9 @@ a{
 
     </div>
 
+
     <div class="grid">
+
 
         <div class="card">
 
@@ -674,12 +874,15 @@ a{
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- DISCORD -->
+<!-- =========================
+     DISCORD
+========================= -->
 
 <section id="discord" class="section">
 
@@ -690,7 +893,8 @@ a{
         </h2>
 
         <p>
-            Get updates, chat with players, and stay up to date with Ducky SMP.
+            Get updates, chat with players,
+            and stay up to date with Ducky SMP.
         </p>
 
         <a
@@ -707,7 +911,9 @@ a{
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer class="footer">
 
@@ -722,28 +928,41 @@ a{
 </footer>
 
 
-<!-- COPY SCRIPT -->
+<!-- =========================
+     COPY FUNCTION
+========================= -->
 
 <script>
+
 function copyText(text){
 
-    if(navigator.clipboard && window.isSecureContext){
+    if(
+        navigator.clipboard &&
+        window.isSecureContext
+    ){
 
-        navigator.clipboard.writeText(text)
-        .then(function(){
-            alert("Copied: " + text);
-        })
-        .catch(function(){
-            alert(text);
-        });
+        navigator.clipboard
+            .writeText(text)
+            .then(function(){
+
+                alert("Copied: " + text);
+
+            })
+            .catch(function(){
+
+                alert(text);
+
+            });
 
     }else{
 
-        var textarea=document.createElement("textarea");
+        var textarea =
+            document.createElement("textarea");
 
-        textarea.value=text;
-        textarea.style.position="fixed";
-        textarea.style.left="-9999px";
+        textarea.value = text;
+
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
 
         document.body.appendChild(textarea);
 
@@ -751,16 +970,24 @@ function copyText(text){
         textarea.select();
 
         try{
+
             document.execCommand("copy");
+
             alert("Copied: " + text);
+
         }catch(error){
+
             alert(text);
+
         }
 
         document.body.removeChild(textarea);
     }
+
 }
+
 </script>
+
 
 </body>
 </html>
