@@ -1,5 +1,11 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ducky SMP</title><style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ducky SMP</title>
+
+<style>
 
 *{
     box-sizing:border-box;
@@ -12,17 +18,8 @@ html{
 body{
     margin:0;
     font-family:Arial,Helvetica,sans-serif;
-
-    background:
-    linear-gradient(
-        135deg,
-        #fff4b0 0%,
-        #ffd166 45%,
-        #ff7a00 100%
-    );
-
+    background:linear-gradient(135deg,#fff4b0 0%,#ffd166 45%,#ff7a00 100%);
     background-attachment:fixed;
-
     color:#fff;
 }
 
@@ -32,22 +29,15 @@ a{
 }
 
 
-/* =========================
-   NAV
-========================= */
+/* NAV */
 
 .nav{
     position:sticky;
     top:0;
     z-index:1000;
-
     padding:14px 6%;
-
     background:rgba(15,13,7,.65);
-
-    border-bottom:
-    1px solid rgba(255,255,255,.15);
-
+    border-bottom:1px solid rgba(255,255,255,.15);
     backdrop-filter:blur(20px);
     -webkit-backdrop-filter:blur(20px);
 }
@@ -55,7 +45,6 @@ a{
 .navin{
     max-width:1100px;
     margin:auto;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -65,9 +54,7 @@ a{
     font-size:22px;
     font-weight:900;
     color:#fff;
-
-    text-shadow:
-    0 0 15px rgba(255,213,42,.5);
+    text-shadow:0 0 15px rgba(255,213,42,.5);
 }
 
 .links{
@@ -85,18 +72,13 @@ a{
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     min-height:82vh;
-
     display:grid;
     place-items:center;
-
     text-align:center;
-
     padding:80px 20px;
 }
 
@@ -107,33 +89,23 @@ a{
 
 .badge{
     display:inline-block;
-
     padding:9px 16px;
-
     border-radius:999px;
-
     background:rgba(15,13,7,.35);
-
-    border:
-    1px solid rgba(255,255,255,.35);
-
+    border:1px solid rgba(255,255,255,.35);
     font-weight:800;
-
     backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
 }
 
 .hero h1{
     font-size:clamp(55px,12vw,105px);
-
     margin:20px 0 10px;
-
     line-height:.9;
-
     color:#fff;
-
     text-shadow:
-    0 5px 0 rgba(100,55,0,.5),
-    0 0 35px rgba(255,255,255,.55);
+        0 5px 0 rgba(100,55,0,.5),
+        0 0 35px rgba(255,255,255,.55);
 }
 
 .hero p{
@@ -142,49 +114,31 @@ a{
 
 .hero-description{
     max-width:800px;
-
     margin:20px auto;
-
     line-height:1.7;
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 
 .buttons{
     display:flex;
-
     justify-content:center;
     align-items:center;
-
     flex-wrap:wrap;
-
     gap:14px;
-
     margin-top:30px;
 }
 
 .btn{
     display:inline-block;
-
     padding:13px 22px;
-
     border-radius:12px;
-
-    border:
-    1px solid rgba(255,255,255,.3);
-
-    background:
-    rgba(255,213,42,.9);
-
+    border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,213,42,.9);
     color:#201500;
-
     font-weight:900;
-
     cursor:pointer;
-
     transition:.2s;
 }
 
@@ -193,25 +147,18 @@ a{
 }
 
 .btn.alt{
-    background:
-    rgba(15,13,7,.55);
-
+    background:rgba(15,13,7,.55);
     color:#fff;
-
     backdrop-filter:blur(15px);
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 .section{
     width:100%;
     max-width:1100px;
-
     margin:auto;
-
     padding:75px 20px;
 }
 
@@ -222,41 +169,26 @@ a{
 
 .title h2{
     margin:0;
-
     font-size:34px;
-
     color:#fff;
 }
 
 .title p{
-    color:
-    rgba(255,255,255,.85);
+    color:rgba(255,255,255,.85);
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 
 .card{
-
-    background:
-    rgba(15,13,7,.48);
-
-    border:
-    1px solid rgba(255,255,255,.2);
-
+    background:rgba(15,13,7,.48);
+    border:1px solid rgba(255,255,255,.2);
     border-radius:22px;
-
     padding:25px;
-
     color:#fff;
-
     backdrop-filter:blur(20px);
     -webkit-backdrop-filter:blur(20px);
-
-    box-shadow:
-    0 18px 50px rgba(0,0,0,.22);
+    box-shadow:0 18px 50px rgba(0,0,0,.22);
 }
 
 .card h3{
@@ -268,38 +200,23 @@ a{
 }
 
 
-/* =========================
-   GRID
-========================= */
+/* GRID */
 
 .grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:18px;
 }
 
 
-/* =========================
-   IP
-========================= */
+/* IP */
 
 .ip{
-
     font-size:18px;
-
     padding:14px;
-
     border-radius:12px;
-
-    background:
-    rgba(255,255,255,.08);
-
-    border:
-    1px solid rgba(255,255,255,.2);
-
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
     word-break:break-all;
 }
 
@@ -314,170 +231,104 @@ a{
 }
 
 
-/* =========================
-   LIVE STATUS
-========================= */
+/* LIVE SERVER STATUS */
 
 .live-status{
-
     margin-top:20px;
-
     padding:22px;
-
     border-radius:20px;
-
-    background:
-    rgba(0,0,0,.30);
-
-    border:
-    1px solid rgba(255,255,255,.25);
-
+    background:rgba(0,0,0,.30);
+    border:1px solid rgba(255,255,255,.25);
     text-align:center;
-
     box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.1),
-    0 10px 30px rgba(0,0,0,.2);
+        inset 0 1px 0 rgba(255,255,255,.1),
+        0 10px 30px rgba(0,0,0,.2);
 }
 
 .live-title{
-
     font-size:13px;
-
     letter-spacing:2px;
-
     font-weight:900;
-
-    color:
-    rgba(255,255,255,.7);
-
+    color:rgba(255,255,255,.7);
     margin-bottom:12px;
 }
 
 .status{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:10px;
-
     font-size:22px;
-
     font-weight:900;
 }
 
 .dot{
-
     width:13px;
     height:13px;
-
     border-radius:50%;
-
     background:#ffd166;
-
-    box-shadow:
-    0 0 12px #ffd166;
+    box-shadow:0 0 12px #ffd166;
 }
 
 .dot.online{
-
     background:#39ff78;
-
     box-shadow:
-    0 0 8px #39ff78,
-    0 0 20px rgba(57,255,120,.8);
+        0 0 8px #39ff78,
+        0 0 20px rgba(57,255,120,.8);
 }
 
 .dot.offline{
-
     background:#ff3b30;
-
     box-shadow:
-    0 0 8px #ff3b30,
-    0 0 20px rgba(255,59,48,.7);
+        0 0 8px #ff3b30,
+        0 0 20px rgba(255,59,48,.7);
 }
 
 .online-players{
-
     margin-top:15px;
-
     font-size:38px;
-
     font-weight:900;
-
     color:#fff;
 }
 
 .online-label{
-
     margin-top:2px;
-
     font-size:12px;
-
-    color:
-    rgba(255,255,255,.6);
-
+    color:rgba(255,255,255,.6);
     letter-spacing:1px;
 }
 
 .last-check{
-
     margin-top:14px;
-
     font-size:11px;
-
-    color:
-    rgba(255,255,255,.45);
+    color:rgba(255,255,255,.45);
 }
 
 
-/* =========================
-   FEATURES
-========================= */
+/* FEATURES */
 
 .feature-grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(200px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:18px;
-
     margin-top:25px;
 }
 
 .feature-card{
-
     padding:22px;
-
     border-radius:18px;
-
-    background:
-    rgba(15,13,7,.38);
-
-    border:
-    1px solid rgba(255,255,255,.16);
-
+    background:rgba(15,13,7,.38);
+    border:1px solid rgba(255,255,255,.16);
     text-align:center;
-
     backdrop-filter:blur(15px);
 }
 
 
-/* =========================
-   RULES
-========================= */
+/* RULES */
 
 .rule{
-
     padding:15px 0;
-
-    border-bottom:
-    1px solid rgba(255,255,255,.15);
-
+    border-bottom:1px solid rgba(255,255,255,.15);
     line-height:1.7;
 }
 
@@ -486,48 +337,31 @@ a{
 }
 
 
-/* =========================
-   STAFF
-========================= */
+/* STAFF */
 
 .staff{
     font-weight:900;
 }
 
 .small{
-
     font-size:13px !important;
-
-    color:
-    rgba(255,255,255,.7) !important;
+    color:rgba(255,255,255,.7) !important;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .footer{
-
     margin-top:30px;
-
     padding:40px 20px;
-
     text-align:center;
-
-    background:
-    rgba(15,13,7,.35);
-
-    border-top:
-    1px solid rgba(255,255,255,.15);
-
+    background:rgba(15,13,7,.35);
+    border-top:1px solid rgba(255,255,255,.15);
     backdrop-filter:blur(18px);
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:650px){
 
@@ -545,8 +379,7 @@ a{
     }
 
     .hero h1{
-        font-size:
-        clamp(48px,17vw,80px);
+        font-size:clamp(48px,17vw,80px);
     }
 
     .section{
@@ -574,29 +407,58 @@ a{
 
 }
 
-</style></head><body><!-- =========================
-     NAVIGATION
-========================= --><nav class="nav"><div class="navin"><a class="logo" href="#home">
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav class="nav">
+
+<div class="navin">
+
+<a class="logo" href="#home">
 🦆 DUCKY SMP
-</a><div class="links"><a href="#why">
-Why Join
-</a><a href="#server">
-Server
-</a><a href="#rules">
-Rules
-</a><a href="#staff">
-Staff
-</a><a href="#discord">
-Discord
-</a></div></div></nav><!-- =========================
-     HERO
-========================= --><header id="home" class="hero"><div class="hero-content"><span class="badge">
+</a>
+
+<div class="links">
+
+<a href="#why">Why Join</a>
+<a href="#server">Server</a>
+<a href="#rules">Rules</a>
+<a href="#staff">Staff</a>
+<a href="#discord">Discord</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header id="home" class="hero">
+
+<div class="hero-content">
+
+<span class="badge">
 ★ MINECRAFT BEDROCK SMP
-</span><h1>
+</span>
+
+<h1>
 DUCKY SMP
-</h1><p>
+</h1>
+
+<p>
 🦆 WHY JOIN DUCKY SMP? 🦆
-</p><p class="hero-description">⚔️
+</p>
+
+<p class="hero-description">
+
+⚔️
 <strong>
 PURE SEMI-ANARCHY. NO HAND-HOLDING.
 </strong>
@@ -608,241 +470,477 @@ Want an SMP where your choices actually matter?
 Ducky SMP is built for players who want freedom,
 chaos, PvP, and a survival experience shaped by the community.
 
-</p><div class="buttons"><a class="btn" href="#server">
+</p>
+
+<div class="buttons">
+
+<a class="btn" href="#server">
 PLAY NOW
-</a><a
+</a>
+
+<a
 class="btn alt"
 href="https://discord.gg/eKhSK9bFUh"
 target="_blank"
-rel="noopener"
-
-«»
-
+rel="noopener">
 JOIN DISCORD
 </a>
 
-</div></div></header><!-- =========================
-     WHY JOIN
-========================= --><section id="why" class="section"><div class="title"><h2>
+</div>
+
+</div>
+
+</header>
+
+
+<!-- WHY JOIN -->
+
+<section id="why" class="section">
+
+<div class="title">
+
+<h2>
 🦆 WHY JOIN DUCKY SMP? 🦆
-</h2><p>
+</h2>
+
+<p>
 ⚔️ PURE SEMI-ANARCHY. NO HAND-HOLDING.
-</p></div><div class="card"><p>Want an SMP where your choices actually matter?
+</p>
+
+</div>
+
+<div class="card">
+
+<p>
+
+Want an SMP where your choices actually matter?
 
 Ducky SMP is built for players who want freedom,
 chaos, PvP, and a survival experience shaped by the community.
 
-</p><div class="feature-grid"><div class="feature-card">
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
 ⚔️ Fight whoever stands in your way
-</div><div class="feature-card">
+</div>
+
+<div class="feature-card">
 🏴 Create your own faction or run solo
-</div><div class="feature-card">
+</div>
+
+<div class="feature-card">
 💣 Raid, betray, team up, and make enemies
-</div><div class="feature-card">
+</div>
+
+<div class="feature-card">
 🏡 Build your base anywhere and defend it
-</div><div class="feature-card">
+</div>
+
+<div class="feature-card">
 🌎 Explore a world where anything can happen
-</div><div class="feature-card">
+</div>
+
+<div class="feature-card">
 🎮 Custom features made for Ducky SMP
-</div><div class="feature-card">
+</div>
+
+<div class="feature-card">
 🦆 Make your own story and leave your mark
-</div></div><p style="margin-top:28px;"><strong>
+</div>
+
+</div>
+
+<p style="margin-top:28px;">
+
+<strong>
 No scripted storyline. No forced teams. No boring restrictions.
-</strong><br><br>
+</strong>
+
+<br><br>
 
 You decide who to trust.
 
-<br>You decide who to fight.
+<br>
 
-<br>You decide what your legacy becomes.
+You decide who to fight.
+
+<br>
+
+You decide what your legacy becomes.
 
 <br><br>
 
 <strong>
 🦆 DUCKY SMP — CREATE CHAOS. BUILD YOUR LEGACY. SURVIVE.
-</strong></p></div></section><!-- =========================
-     SERVER
-========================= --><section id="server" class="section"><div class="title"><h2>
+</strong>
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SERVER -->
+
+<section id="server" class="section">
+
+<div class="title">
+
+<h2>
 SERVER INFO
-</h2><p>
+</h2>
+
+<p>
 Everything you need to join.
-</p></div><div class="grid"><!-- IP --><div class="card"><h3>
+</p>
+
+</div>
+
+<div class="grid">
+
+
+<!-- IP -->
+
+<div class="card">
+
+<h3>
 🌐 IP Address
-</h3><div class="ip">
+</h3>
+
+<div class="ip">
 109.123.232.42
-</div><button
+</div>
+
+<button
 class="btn copy"
-onclick="copyText('109.123.232.42')"
-
-«»
-
+onclick="copyText('109.123.232.42')">
 COPY IP
 </button>
 
-</div><!-- PORT --><div class="card"><h3>
+</div>
+
+
+<!-- PORT -->
+
+<div class="card">
+
+<h3>
 🔌 Port
-</h3><div class="ip">
+</h3>
+
+<div class="ip">
 19160
-</div><button
+</div>
+
+<button
 class="btn copy"
-onclick="copyText('19160')"
-
-«»
-
+onclick="copyText('19160')">
 COPY PORT
 </button>
 
-</div><!-- PLATFORM --><div class="card"><h3>
-📱 Platform
-</h3><p class="server-value">
-Bedrock Edition
-</p><p class="server-value">
-Game Version: 26.51
-</p><p class="small">
-Use the server address and port above to connect.
-</p><!-- =========================
-     LIVE STATUS
-========================= --><div class="live-status"><div class="live-title">
-LIVE SERVER STATUS
-</div><div class="status"><span
-id="statusDot"
-class="dot"
+</div>
 
-«</span>»
+
+<!-- PLATFORM -->
+
+<div class="card">
+
+<h3>
+📱 Platform
+</h3>
+
+<p class="server-value">
+Bedrock Edition
+</p>
+
+<p class="server-value">
+Game Version: 26.51
+</p>
+
+<p class="small">
+Use the server address and port above to connect.
+</p>
+
+
+<!-- LIVE STATUS -->
+
+<div class="live-status">
+
+<div class="live-title">
+LIVE SERVER STATUS
+</div>
+
+<div class="status">
+
+<span id="statusDot" class="dot"></span>
 
 <span id="statusText">
 CHECKING...
-</span></div><div
+</span>
+
+</div>
+
+<div
 id="playerNumber"
-class="online-players"
->
--- / --
-</div><div class="online-label">
+class="online-players">
+--
+</div>
+
+<div class="online-label">
 PLAYERS ONLINE
-</div><div
+</div>
+
+<div
 id="lastCheck"
-class="last-check"
->
+class="last-check">
 Connecting to mcstatus.io...
-</div></div></div></div></section><!-- =========================
-     RULES
-========================= --><section id="rules" class="section"><div class="title"><h2>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RULES -->
+
+<section id="rules" class="section">
+
+<div class="title">
+
+<h2>
 SERVER RULES
-</h2><p>
+</h2>
+
+<p>
 Follow the rules and keep the semi-anarchy experience enjoyable for everyone.
-</p></div><div class="card"><div class="rule"><strong>
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="rule">
+
+<strong>
 1. No Exploiting
-</strong>— Do not use hacks, cheats,
+</strong>
+
+— Do not use hacks, cheats,
 or unfair exploits to gain an advantage.
 
-</div><div class="rule"><strong>
+</div>
+
+<div class="rule">
+
+<strong>
 2. No Glitch Abuse
-</strong>— Do not abuse bugs or glitches,
+</strong>
+
+— Do not abuse bugs or glitches,
 including duplication glitches (dupes).
 
-</div></div></section><!-- =========================
-     STAFF
-========================= --><section id="staff" class="section"><div class="title"><h2>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STAFF -->
+
+<section id="staff" class="section">
+
+<div class="title">
+
+<h2>
 STAFF TEAM
-</h2><p>
+</h2>
+
+<p>
 Meet the people helping run Ducky SMP.
-</p></div><div class="grid"><div class="card"><h3>
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
 👑 Owner
-</h3><p class="staff">
+</h3>
+
+<p class="staff">
 Ducky
-</p><p class="small">
+</p>
+
+<p class="small">
 Server Owner Aka Duckythegoat_01
-</p></div><div class="card"><h3>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
 🤝 Co-Owner
-</h3><p class="staff">
+</h3>
+
+<p class="staff">
 Shuzuki
-</p><p class="small">
+</p>
+
+<p class="small">
 Server Co-Owner
-</p></div><div class="card"><h3>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
 🖥️ Developer
-</h3><p class="staff">
+</h3>
+
+<p class="staff">
 Veldora
-</p><p class="small">
+</p>
+
+<p class="small">
 Server Developer
-</p></div><div class="card"><h3>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
 🛡️ Admin
-</h3><p class="staff">
+</h3>
+
+<p class="staff">
 Eliminatedxd, Ryy, Jaden
-</p><p class="small">
+</p>
+
+<p class="small">
 Securing the server and helping keep it toxic-free and hack-free.
-</p></div></div></section><!-- =========================
-     DISCORD
-========================= --><section id="discord" class="section"><div class="card" style="text-align:center;"><h2>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DISCORD -->
+
+<section id="discord" class="section">
+
+<div class="card" style="text-align:center;">
+
+<h2>
 💬 JOIN THE COMMUNITY
-</h2><p>
+</h2>
+
+<p>
 Get updates, chat with players,
 and stay up to date with Ducky SMP.
-</p><a
+</p>
+
+<a
 class="btn"
 href="https://discord.gg/eKhSK9bFUh"
 target="_blank"
-rel="noopener"
-
-«»
-
+rel="noopener">
 JOIN DISCORD
 </a>
 
-</div></section><!-- =========================
-     FOOTER
-========================= --><footer class="footer">🦆 Ducky SMP S1 PURE SEMI-ANARCHY
+</div>
 
-<br><span class="small">
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+🦆 Ducky SMP S1 PURE SEMI-ANARCHY
+
+<br>
+
+<span class="small">
 Official community website
-</span></footer><script>
+</span>
+
+</footer>
 
 
-/* =========================
-   COPY
-========================= */
+<script>
+
+
+/* COPY BUTTON */
 
 function copyText(text){
 
-    if(
-        navigator.clipboard &&
-        window.isSecureContext
-    ){
+    if(navigator.clipboard && window.isSecureContext){
 
-        navigator.clipboard
-        .writeText(text)
+        navigator.clipboard.writeText(text)
         .then(function(){
 
             alert("Copied: " + text);
 
+        })
+        .catch(function(){
+
+            alert(text);
+
         });
 
-    }
+    }else{
 
-    else{
-
-        const textarea =
+        var textarea =
             document.createElement("textarea");
 
         textarea.value = text;
 
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+
         document.body.appendChild(textarea);
 
+        textarea.focus();
         textarea.select();
 
-        document.execCommand("copy");
+        try{
+
+            document.execCommand("copy");
+            alert("Copied: " + text);
+
+        }catch(error){
+
+            alert(text);
+
+        }
 
         document.body.removeChild(textarea);
-
-        alert("Copied: " + text);
 
     }
 
 }
 
 
-/* =========================
-   MINECRAFT STATUS
-========================= */
+/* LIVE MINECRAFT STATUS */
 
 const STATUS_API =
 "https://api.mcstatus.io/v2/status/bedrock/109.123.232.42:19160";
@@ -851,54 +949,49 @@ const STATUS_API =
 async function getServerStatus(){
 
     const statusText =
-        document.getElementById(
-            "statusText"
-        );
+        document.getElementById("statusText");
 
     const statusDot =
-        document.getElementById(
-            "statusDot"
-        );
+        document.getElementById("statusDot");
 
     const playerNumber =
-        document.getElementById(
-            "playerNumber"
-        );
+        document.getElementById("playerNumber");
 
     const lastCheck =
-        document.getElementById(
-            "lastCheck"
-        );
+        document.getElementById("lastCheck");
 
 
     try{
 
         const response =
             await fetch(
-                STATUS_API
+                STATUS_API,
+                {
+                    cache:"no-store"
+                }
             );
 
 
         if(!response.ok){
 
             throw new Error(
-                "API Error"
+                "HTTP " + response.status
             );
 
         }
 
 
-        const server =
+        const data =
             await response.json();
 
 
         console.log(
-            "MCSTATUS:",
-            server
+            "Ducky SMP Status:",
+            data
         );
 
 
-        if(server.online){
+        if(data.online === true){
 
             statusText.textContent =
                 "ONLINE";
@@ -908,35 +1001,21 @@ async function getServerStatus(){
 
 
             const online =
-                server.players &&
-                server.players.online != null
-
-                ? server.players.online
-
-                : 0;
-
-
-            const max =
-                server.players &&
-                server.players.max != null
-
-                ? server.players.max
-
-                : "?";
+                data.players &&
+                typeof data.players.online === "number"
+                    ? data.players.online
+                    : 0;
 
 
             playerNumber.textContent =
-                online + " / " + max;
+                online;
 
 
             lastCheck.textContent =
-                "Live status • Last checked "
-                + new Date()
-                .toLocaleTimeString();
+                "Live • Updated " +
+                new Date().toLocaleTimeString();
 
-        }
-
-        else{
+        }else{
 
             statusText.textContent =
                 "OFFLINE";
@@ -944,56 +1023,46 @@ async function getServerStatus(){
             statusDot.className =
                 "dot offline";
 
-
             playerNumber.textContent =
-                "0 / 0";
-
+                "0";
 
             lastCheck.textContent =
                 "Server is currently offline";
 
         }
 
-    }
 
-    catch(error){
+    }catch(error){
 
         console.error(
-            "MCStatus Error:",
+            "Ducky SMP status error:",
             error
         );
 
 
         statusText.textContent =
-            "STATUS ERROR";
-
+            "UNAVAILABLE";
 
         statusDot.className =
             "dot";
 
-
         playerNumber.textContent =
-            "-- / --";
-
+            "--";
 
         lastCheck.textContent =
-            "Could not connect to mcstatus.io";
+            "Status service unavailable";
 
     }
 
 }
 
 
-/* =========================
-   START
-========================= */
+/* LOAD STATUS */
 
 getServerStatus();
 
 
-/* =========================
-   AUTO UPDATE
-========================= */
+/* UPDATE EVERY 15 SECONDS */
 
 setInterval(
     getServerStatus,
@@ -1001,4 +1070,7 @@ setInterval(
 );
 
 
-</script></body></html>
+</script>
+
+</body>
+</html>
